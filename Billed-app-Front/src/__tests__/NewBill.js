@@ -75,7 +75,6 @@ describe('Given I am connected as an employee', () => {
   describe('When I add a new bill', () => {
     test('fetches bills from mock API POST', async () => {
       jest.spyOn(mockStore.bills(), 'update')
-      // environnement
       Object.defineProperty(window, 'localStorage', { value: localStorageMock })
       window.localStorage.setItem(
         'user',
