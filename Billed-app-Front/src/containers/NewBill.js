@@ -35,6 +35,10 @@ export default class NewBill {
       sendButton.removeAttribute("disabled");
     } else {
       sendButton.setAttribute("disabled", "");
+      alert(
+        'Mauvaise extension de pièce jointe - Veuillez choisir un nouveau fichier à transmettre qui contient une extension JPG / JPEG / PNG'
+      )
+      e.target.value = ''
     }
     // Fix unexpected bug : choosing a receipt without saving the bill will still save it
     // this.store
